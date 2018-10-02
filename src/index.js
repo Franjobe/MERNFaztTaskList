@@ -1,13 +1,18 @@
-// www.youtube.com/watch?v=DqpL5UtJHus   
-// MIN 1:03
-
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
+const multer = require('multer');
 
 const { mongoose } = require("./database");
 
+
+// init server APP
 const app = express();
+
+
+
+
+//////////////////////////////////////////////////////////////
 
 //SETTING (configuracion)
 app.set("port", process.env.PORT || 3000);
@@ -22,6 +27,8 @@ app.use(express.json()); //chequea si cualquier dato que se envia al server es j
 //ROUTES (urls que puede tener nuestro server)
 app.use("/api/tasks", require("./routes/task.routes"));
         //aca se define el prefijo de la rest api.
+
+app.use("/", require("./routes/multer"));  //carga el ruteo de subir imagenes     
 
 //STATIC FILES(donde estarán los archivos estaticos: html, css, js -> en la carpeta public.)
 app.use(express.static(path.join(__dirname, "public"))); //señala donde estan los estaticos.

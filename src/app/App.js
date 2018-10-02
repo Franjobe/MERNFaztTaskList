@@ -151,6 +151,22 @@ class App extends Component {
                     </div>
 
                   </div>
+                  <img alt="Dog" id="dog" src="/images/dog.jpg"></img>
+                  
+                  
+                  <form action="/upload" method="POST" encType="multipart/form-data">
+                    <div className="file-field input-field">
+                      <div className="btn grey">
+                        <span>File</span>
+                        <input type="file" name="myImage"></input>
+                      </div>
+                      <div className="file-path-wrapper">
+                        <input className="file-path validate" type="text"></input>
+                      </div>
+                    </div>
+                    <button type="submit" className="btn">Submit</button>
+                  </form>
+
                 </div>
                 <div className="col s7">
                   <table>
@@ -182,6 +198,7 @@ class App extends Component {
                     </tbody>
                   </table>
                 </div>
+             
               </div>
           </div>
 
