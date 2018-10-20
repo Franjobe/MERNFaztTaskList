@@ -2,9 +2,9 @@
 
 const mongoose = require("mongoose");
 
-const URI = "mongodb://localhost/mern-tasks"
+const URI = "mongodb://localhost/mern-tasks" 
 
-//"mongodb://franjo:fran3154@ds121203.mlab.com:21203/testing"
+//"mongodb://franjo:fran3154@ds121203.mlab.com:21203/testing" 
 
 mongoose.connect(URI)
 .then(db => console.log("DB is connected"))
